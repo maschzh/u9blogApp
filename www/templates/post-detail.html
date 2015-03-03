@@ -1,0 +1,60 @@
+<ion-view>
+	<ion-nav-buttons side="left">
+		<!--button class="button button-clear" ng-click="update()">修改</button-->
+		<h1 class="title">{{post.name}}</h1>
+		<button class="button button-clear right" ng-if="isOwner" ng-click="update()">
+			<i class="icon ion-ios7-compose-outline"></i>
+		</button>
+	</ion-nav-buttons>
+  <ion-content>
+    <div class="list">
+    	<!--div class="center item">
+    		<h2 class="title"><b>{{post.name}}</b></h2>
+    	</div-->
+    	<div class="row item tags center">
+    		<div class="col-50">
+    			<b>标签：</b>{{post.tags}}
+    		</div>
+            
+    		<div class="col-50"><span class="calm">{{post.createTime}}</span></div>
+    	</div>
+    	<div class="card tags">
+    		<p>{{post.content}}</p>
+    		<div class="right">
+    			<a href="" class="delete" ng-click="creatComment()">
+    				评论
+    				<i class="iocn ion-ios7-paw-outline"></i>
+	    		</a>
+    			<a href="" class="delete" ng-if="isOwner" ng-click="delete()">
+    				删除
+    				<i class="iocn ion-ios7-trash-outline"></i>
+	    		</a>
+    		</div>
+    	</div>
+    	<div class="card tags" ng-repeat="com in post.comments">
+    			<p class="positive">
+    				{{com.comment}}
+    			</p>
+    			<div class="right">
+    				<a href="" class="delete">
+    					{{com.user.name}}
+    					<i class="iocn ion-ios7-paw-outline"></i>
+	    			</a>	
+    			</div>
+    	</div>
+    	<div ng-if="isComment">
+    		<div class="item item-input-inset">
+    			<label class="item-input-wrapper">
+	     	 		<input type="text" ng-model="newcomment.comment" placeholder="发布评论">
+	    		</label>
+	    		<a href="" class="delete" ng-click="checkcomment()">
+					<button class="button button-small button-calm">
+						发布
+						<i class="iocn ion-ios7-chatboxes-outline"></i>
+					</button>
+				</a>
+ 			</div>
+    	</div>	
+    </div>
+  </ion-content>
+</ion-view>

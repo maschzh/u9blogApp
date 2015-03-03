@@ -1,0 +1,20 @@
+<ion-view id="signin">
+	<ion-nav-buttons side="left">
+		<h1 class="title">U9博客</h1>
+	</ion-nav-buttons>
+	<ion-content class="has-header">
+		<div class="list">
+			<label class="item item-input">
+				<!--i class="icon ion-person-stalker"></i-->
+				<input type="text" ng-model="user.name" placeholder="用户名">
+			</label>
+			<label class="item item-input">
+				<!--i class="icon ion-unlocked"></i-->
+				<input type="password" ng-model="user.password" placeholder="密　码">
+			</label>
+			<button class="button button-block button-assertive" ng-click="login()">
+				立即登录
+			</button>
+		</div>
+	</ion-content>
+</ion-view>

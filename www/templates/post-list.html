@@ -1,0 +1,31 @@
+<ion-view >
+	<ion-nav-buttons side="left">
+		
+		<h1 class="title">博客列表</h1>
+		<button class="button button-clear right" ng-click="newTask()">
+			<i class="icon ion-ios7-plus-empty"></i>
+		</button>
+		<!--button class="button button-clear" ng-click="logout()">
+			<i class="icon ion-ios7-redo-outline"></i>
+		</button-->
+	</ion-nav-buttons>
+	<div class="bar bar-subheader">
+  		<label class="item-input-wrapper">
+			 <i class="icon ion-search placeholder-icon"></i>
+			 <input type="text" class="item-input-wrapper" placeholder="Search" ng-model="query">
+		</label>
+	</div>
+	<ion-content>
+		<br>
+		<br>
+		<ion-refresher on-refresh="doRefresh(1)" pulling-text="下拉刷新..." refreshing-text="请等待!" refreshing-icon="ion-loading-c"> 
+      	</ion-refresher>
+	    <ion-list>
+	    	<ion-item class="item item-avatar" ng-repeat="post in posts | filter:query" type="item-text-wrap" href="#/post/post/{{post._id}}">
+				<img src="img/i{{$index%4+1}}.png">
+	    		<h2>{{post.name}}</h2>
+	    		<p><span class="calm">{{post.createTime}}</span></p>
+	    	</ion-item>
+	    </ion-list>
+	</ion-content>
+</ion-view>

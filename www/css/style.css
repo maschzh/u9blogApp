@@ -1,0 +1,28 @@
+/* Empty. Add your own CSS if you like */
+.center{
+	text-align: center;
+}
+body{
+	font-size: 14px;
+}
+
+textarea{
+	height: 150px;
+}
+.tags{
+	font-size: 14px;
+	background: url(maschzh.jpg)
+}
+
+.delete{
+	float:right;
+}
+
+.content{
+	background: #fff;
+}
+ img {
+	display:block;
+	border-radius:.75rem;
+}
+

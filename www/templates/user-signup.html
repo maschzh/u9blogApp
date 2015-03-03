@@ -1,0 +1,24 @@
+<ion-view>
+	<ion-nav-buttons side="left">
+		<h1 class="title">U9博客</h1>
+	</ion-nav-buttons>
+	<ion-content class="has-header">
+		<div class="list">
+			<label class="item item-input">
+				<input type="text" ng-model="user.name" placeholder="用户名" autofocus>
+			</label>
+			<label class="item item-input">
+				<input type="text" ng-model="user.email" placeholder="邮  箱">
+			</label>
+			<label class="item item-input">
+				<input type="password" ng-model="user.password" placeholder="密 码">
+			</label>
+			<label class="item item-input">
+				<input type="password" ng-model="user.passwordrepeat" placeholder="确认密码">
+			</label>
+			<button class="button button-block button-assertive" ng-click="register()">
+				注　册
+			</button>
+		</div>
+	</ion-content>
+</ion-view>

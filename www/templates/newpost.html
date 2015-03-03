@@ -1,0 +1,26 @@
+<div class="modal slide-in-up" ng-controller="newPostCtrl">
+	<header class="bar bar-header bar-sencondary bar-assertive">
+		<button class="button button-clear button-primary" ng-click="close()">
+			<i class="icon ion-ios7-close-empty"></i>
+		</button>
+		<h1 class="title calm">新增博客</h1>
+		<button class="button  button-clear" ng-click="createNew()">完成</button>
+	</header>
+
+	<ion-content class="padding has-header">
+		<div class="list">
+			<label class="item item-input">
+				<input type="text" ng-model="post.name" placeholder="标题">
+			</label>
+			<label class="item item-input">
+				<input type="text" ng-model="post.tags" placeholder="标签">
+			</label>
+			<label class="item item-input">
+				<input type="text" ng-model="post.head" placeholder="主题">
+			</label>
+			<label class="item item-input">
+				<textarea type="text" ng-model="post.content" placeholder="内容"></textarea>
+			</label>
+		</div>
+	</ion-content>
+</div>

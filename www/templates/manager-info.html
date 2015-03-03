@@ -1,0 +1,32 @@
+<div class="modal slide-in-up" ng-controller="UserinfoCtrl">
+	<header class="bar bar-header bar-sencondary bar-assertive">
+		<button class="button button-clear button-primary" ng-click="close()">
+			<i class="icon ion-ios7-close-empty"></i>
+		</button>
+		<h1 class="title calm">修改个人信息</h1>
+		<button class="button  button-clear" ng-click="updateUserInfo()">完成</button>
+	</header>
+
+	<ion-content class="padding has-header">
+		<div class="list">
+			<label class="item item-input">
+				<input type="text" ng-model="user.nickname" placeholder="昵称">
+			</label>
+			<label class="item item-input">
+				<input type="text" ng-model="user.birthday" placeholder="生日">
+			</label>
+			<label class="item item-input">
+				<input type="text" ng-model="user.sex" placeholder="性别">
+			</label>
+			<label class="item item-input">
+				<input type="text" ng-model="user.age" placeholder="年龄">
+			</label>
+			<label class="item item-input">
+				<input type="text" ng-model="user.telephone" placeholder="联系方式（电话）">
+			</label>
+			<label class="item item-input">
+				<input type="text" ng-model="user.address" placeholder="联系地址">
+			</label>
+		</div>
+	</ion-content>
+</div>
